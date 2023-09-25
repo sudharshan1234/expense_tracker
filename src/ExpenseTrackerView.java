@@ -104,7 +104,7 @@ public class ExpenseTrackerView extends JFrame {
       }
       Object[] totalRow = {"Total", null, null, totalCost};
       model.addRow(totalRow);
-  
+      
       // Fire table update
       transactionsTable.updateUI();
   
