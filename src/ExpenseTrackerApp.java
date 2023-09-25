@@ -26,14 +26,15 @@ public class ExpenseTrackerApp {
     view.getAddTransactionBtn().addActionListener(e -> {
       
       // Get transaction data from view
-      double amount = view.getAmountField(); 
+      String amount = view.getAmountField(); 
       		
       String category = view.getCategoryField();
       try {
-		inputValidation.isAmountValid(amount);
-		inputValidation.isCategoryValid(category);
+      inputValidation.isAmountValid(amount);
+      inputValidation.isCategoryValid(category);
+      double amountNum = Double.parseDouble(amount);
 	      // Create transaction object
-	    Transaction t = new Transaction(amount, category);
+	    Transaction t = new Transaction(amountNum, category);
 	
 	      // Call controller to add transaction
 	    view.addTransaction(t);
