@@ -39,24 +39,27 @@ public class ExpenseTrackerTest {
         assertEquals(amount, transactions.get(0).getAmount(), 0.001);
         assertEquals(category, transactions.get(0).getCategory());
     }
-    @Test(expected= InvalidAmountException.class) 
-    public void testValidateTransaction() throws InvalidAmountException, InvalidCategoryException {
+
+    @Test(expected = InvalidAmountException.class)
+    public void testValidateTransactionAmount() throws InvalidAmountException, InvalidCategoryException {
         InputValidation inputValidation = new InputValidation();
         String amount = "100.0ab0";
         String category = "school";
         inputValidation.isAmountValid(amount);
         inputValidation.isCategoryValid(category);
     }
-    @Test(expected= InvalidAmountException.class) 
-    public void testValidateTransaction() throws InvalidAmountException, InvalidCategoryException {
+
+    @Test(expected = InvalidAmountException.class)
+    public void testValidateTransactionCategory() throws InvalidAmountException, InvalidCategoryException {
         InputValidation inputValidation = new InputValidation();
         String amount = "99999";
         String category = "travel";
         inputValidation.isAmountValid(amount);
         inputValidation.isCategoryValid(category);
     }
-    @Test(expected= InvalidCategoryException.class) 
-    public void testValidateTransaction() throws InvalidAmountException, InvalidCategoryException {
+
+    @Test(expected = InvalidCategoryException.class)
+    public void testValidateTransactionExceedAmount() throws InvalidAmountException, InvalidCategoryException {
         InputValidation inputValidation = new InputValidation();
         String amount = "789";
         String category = "Dance";
@@ -64,7 +67,4 @@ public class ExpenseTrackerTest {
         inputValidation.isCategoryValid(category);
     }
 
-    
-
 }
-
