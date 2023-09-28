@@ -1,0 +1,56 @@
+vagisudar@Sudharshans-MacBook-Air expense_tracker % git log
+commit dd504c6332a8358e8a12cf043a32693abd0c4e0c (HEAD -> main, origin/main)
+Merge: 2c3741c d0f4488
+Author: sudharshan1234 <47589005+sudharshan1234@users.noreply.github.com>
+Date:   Wed Sep 27 21:44:24 2023 -0400
+
+    Merge pull request #1 from sudharshan1234/Develop
+    
+    Develop
+
+commit d0f4488b0564e75b8445adf11f08322ced655559 (origin/Develop, Develop)
+Author: sudharshan1234 <sudarchakra2000@gmail.com>
+Date:   Wed Sep 27 21:38:31 2023 -0400
+
+    Committing JavaDoc
+
+commit 63db4561ec069f6fe93f63f8a49f68ed9eccb2e5
+Author: sudharshan1234 <sudarchakra2000@gmail.com>
+Date:   Wed Sep 27 21:36:20 2023 -0400
+
+    added empty category and amount testcases
+
+commit e9321fa3058ab12ba694e3311bb0c8ca45a9d068
+Author: sudharshan1234 <sudarchakra2000@gmail.com>
+Date:   Wed Sep 27 21:16:04 2023 -0400
+
+    fixed tests bug
+
+commit d9c6436eea64c162ed7de379408b3b1be1b2fa8d
+Author: Smruthi Sathyamoorthy <smruthi.sathyamoorthy@gmail.com>
+Date:   Wed Sep 27 21:13:04 2023 -0400
+
+    Added test cases for invalid category and amount
+
+commit 22a05428b13647b4a7da23ce70a418e51e40975e
+Author: sudharshan1234 <sudarchakra2000@gmail.com>
+Date:   Wed Sep 27 21:05:39 2023 -0400
+
+    added logging
+
+commit 7e0d443da7ddbb1632f978f99dba2f74296c9133
+Author: Smruthi Sathyamoorthy <smruthi.sathyamoorthy@gmail.com>
+Date:   Wed Sep 27 21:05:03 2023 -0400
+
+    Added new test for validating amount
+
+commit 6f75df99e9b5a2fb71bf28511b3e329a25fb1ac8
+Author: sudharshan1234 <sudarchakra2000@gmail.com>
+Date:   Wed Sep 27 20:26:37 2023 -0400
+
+    added jdoc comments for Exception classes
+commit 2c3741cf595d72b41f98e76ef36f23644f7376a0
+Author: sudharshan1234 <sudarchakra2000@gmail.com>
+Date:   Fri Sep 22 12:42:12 2023 -0400
+
+    Initial Commit
