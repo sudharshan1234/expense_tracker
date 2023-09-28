@@ -39,4 +39,15 @@ public class ExpenseTrackerTest {
         assertEquals(amount, transactions.get(0).getAmount(), 0.001);
         assertEquals(category, transactions.get(0).getCategory());
     }
+    @Test(expected= InvalidAmountException.class) 
+    public void testValidateTransaction() throws InvalidAmountException, InvalidCategoryException {
+        InputValidation inputValidation = new InputValidation();
+        String amount = "100.0ab0";
+        String category = "school";
+        inputValidation.isAmountValid(amount);
+        inputValidation.isCategoryValid(category);
+
+    }
+
 }
+

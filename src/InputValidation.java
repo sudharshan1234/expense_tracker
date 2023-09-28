@@ -18,7 +18,6 @@ public class InputValidation {
 				throw new InvalidAmountException("Invalid Amount. Please enter amount between 0 and 1000");
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
 			throw new InvalidAmountException("Invalid Amount. Please enter amount between 0 and 1000");
 
 		}
