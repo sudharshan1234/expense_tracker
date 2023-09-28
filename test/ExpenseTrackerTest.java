@@ -50,7 +50,7 @@ public class ExpenseTrackerTest {
     }
 
     @Test(expected = InvalidAmountException.class)
-    public void testValidateTransactionCategory() throws InvalidAmountException, InvalidCategoryException {
+    public void testValidateTransactionExceedAmount() throws InvalidAmountException, InvalidCategoryException {
         InputValidation inputValidation = new InputValidation();
         String amount = "99999";
         String category = "travel";
@@ -58,11 +58,29 @@ public class ExpenseTrackerTest {
         inputValidation.isCategoryValid(category);
     }
 
+    @Test(expected = InvalidAmountException.class)
+    public void testValidateTransactionEmptyAmount() throws InvalidAmountException, InvalidCategoryException {
+        InputValidation inputValidation = new InputValidation();
+        String amount = "";
+        String category = "travel";
+        inputValidation.isAmountValid(amount);
+        inputValidation.isCategoryValid(category);
+    }
+
     @Test(expected = InvalidCategoryException.class)
-    public void testValidateTransactionExceedAmount() throws InvalidAmountException, InvalidCategoryException {
+    public void testValidateTransactionCategory() throws InvalidAmountException, InvalidCategoryException {
         InputValidation inputValidation = new InputValidation();
         String amount = "789";
         String category = "Dance";
+        inputValidation.isAmountValid(amount);
+        inputValidation.isCategoryValid(category);
+    }
+
+    @Test(expected = InvalidCategoryException.class)
+    public void testValidateTransactionEmptyCateg() throws InvalidAmountException, InvalidCategoryException {
+        InputValidation inputValidation = new InputValidation();
+        String amount = "789";
+        String category = "";
         inputValidation.isAmountValid(amount);
         inputValidation.isCategoryValid(category);
     }
